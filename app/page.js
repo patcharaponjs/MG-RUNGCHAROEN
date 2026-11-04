@@ -10,8 +10,8 @@ export default function Home() {
     <main className="min-h-screen bg-gray-100">
       <header className="bg-red-600 text-white p-5 shadow">
         <div className="max-w-5xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">MG CUSTOMER FEEDBACK</h1>
-          <span className="text-sm">Customer Satisfaction</span>
+          <h1 className="text-2xl font-bold">ศูณย์บริการ เอ็มจีรุ่งเจริญ สำนักงานใหญ่(เทพารักษ์)</h1>
+          <span className="text-sm">ความพึงพอใจของลูกค้า</span>
         </div>
       </header>
 
@@ -36,11 +36,11 @@ export default function Home() {
               className="w-full border rounded-lg p-3"
             >
               <option value="">-- กรุณาเลือกบริการ --</option>
-              <option value="ซ่อมบำรุงรถยนต์">ซ่อมบำรุงรถยนต์</option>
-              <option value="ตรวจเช็กรถยนต์">ตรวจเช็กรถยนต์</option>
-              <option value="ทดลองขับรถยนต์">ทดลองขับรถยนต์</option>
-              <option value="ซื้อรถยนต์">ซื้อรถยนต์</option>
-              <option value="อื่นๆ">อื่นๆ</option>
+              <option value="ซ่อมบำรุงรักษา (งานซ่อม รถมีปัญหา)">ซ่อมบำรุงรักษา (งานซ่อม รถมีปัญหา)</option>
+              <option value="เช็คระยะ (การบำรุงรักษาตามระยะ)">เช็คระยะ (การบำรุงรักษาตามระยะ)</option>
+              <option value="รับประกันคุณภาพ">รับประกันคุณภาพ</option>
+              <option value="ซ่อมตัวถังและสี">ซ่อมตัวถังและสี</option>
+            
             </select>
           </div>
 
@@ -61,7 +61,7 @@ export default function Home() {
           </button>
 
           <p className="text-gray-400 text-sm mt-8">
-            MG Customer Feedback System
+            MG Customer Feedback 
           </p>
         </div>
       </section>
