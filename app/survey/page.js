@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { supabase } from "../../lib/supabase";
 
@@ -21,7 +20,8 @@ const ratingLabels = [
   "ดีมาก",
 ];
 
-export default function SurveyPage() {
+// 1. แยก Component ย่อยสำหรับจัดการ Logic และ UI ของแบบสอบถาม
+function SurveyForm() {
   const searchParams = useSearchParams();
   const service = searchParams.get("service") || "";
 
@@ -100,7 +100,6 @@ export default function SurveyPage() {
 
   return (
     <main className="min-h-screen bg-gray-100">
-
       <header className="bg-red-600 text-white shadow-md">
         <div className="max-w-4xl mx-auto px-6 py-5 flex justify-between items-center">
           <h1 className="text-xl md:text-2xl font-bold">
@@ -229,5 +228,14 @@ export default function SurveyPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+// 2. Export หน้าหลักโดยครอบด้วย Suspense
+export default function SurveyPage() {
+  return (
+    <Suspense fallback={<div className="p-8 text-center">กำลังโหลดแบบประเมิน...</div>}>
+      <SurveyForm />
+    </Suspense>
   );
 }
